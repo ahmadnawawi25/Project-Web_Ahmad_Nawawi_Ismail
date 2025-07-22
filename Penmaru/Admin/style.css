@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body & font */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-top: 30;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/*sidebar*/
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background:linear-gradient( 135deg, #2c3e50, #34435a);
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0,1);
+    z-index: 999;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sideebar ul li a:hover {
+    background-color: #1abc9c;
+    transform: translateX(5px);
+}
+
+/* konten utama bergeser kekanan karena sidebar*/
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* header & statistik container*/
+header {
+    margin-bottom: 30px;
+}
+
+/*container statistik kotak*/
+.stats-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/*kartu statistik*/
+.stat-card {
+    flex: 1 1 260px;
+    background: #1976d2;
+    color: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    display: flex;
+    align-self: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+/*hover efek*/
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+/*ikon statstik*/
+.stat-icon {
+    font-size: 45px;
+    margin-right: 25px;
+    user-select: none;
+}
+
+.stat-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*isi teks dalam kartu*/
+.stat-content h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.stat-content p {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+/*warna latar belakang berbeda untuk tiap kartu*/
+.bg-blue {
+    background: linear-gradient(135deg, #2196f3,#1976d2);
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #4caf50,#388e3c);
+}
+
+.bg-pink {
+    background: linear-gradient(135deg, #e91e63,#c2185b);
+}
+
+/*pesan status*/
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+p.success {
+    color: red;
+    font-weight: bold;
+}
+
+p.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* responsive*/
+@media (max-width: 700px) {
+    .stats-container {
+        flex-direction:  column;
+        align-items: center;
+    }
+/* konten utama */
+.main-content {
+    margin-left: 240px; /*beri ruang untuk sidebar*/
+    padding: 20px;
+}
+}
